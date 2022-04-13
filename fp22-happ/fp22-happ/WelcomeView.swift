@@ -13,7 +13,7 @@ struct WelcomeView: View {
             Spacer()
             
             Text("Happ")
-                .font(.custom("Kollektif-Bold", size: 70))
+                .font(.custom("Kollektif", size: 70))
                 .padding(.vertical, 50)
             Button {
                 //
