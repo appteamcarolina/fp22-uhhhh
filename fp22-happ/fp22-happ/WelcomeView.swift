@@ -11,33 +11,32 @@ struct WelcomeView: View {
     var body: some View {
         VStack {
             Spacer()
-            Spacer()
             
             Text("Happ")
-                .font(.custom("Kollektif-Bold", size: 40))
+                .font(.custom("Kollektif-Bold", size: 70))
+                .padding(.vertical, 50)
             Button {
                 //
             } label: {
                 Text("Get Started")
-                    .bold()
+                    .font(.custom("Kollektif", size: 20))
                     .padding(.vertical, 6)
                     .padding(.horizontal, 12)
                     .background(.white)
-                    .cornerRadius(8)
                     .foregroundColor(.primary)
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(.black, lineWidth: 1)
+                                    .frame(width: 200)
                             )
             }
             
             Spacer()
             
             Text("Stay Updated On Events Happening Near You")
-                .font(.subheadline)
+                .font(.custom("Kollektif-Italic", size: 15))
                 .fontWeight(.thin)
-
-            Spacer()
+                .padding(.vertical, 50)
             
         }
     }
