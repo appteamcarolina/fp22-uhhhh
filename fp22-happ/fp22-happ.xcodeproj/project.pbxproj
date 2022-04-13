@@ -15,6 +15,7 @@
 		62926CC52804B4A40071525A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62926CC42804B4A40071525A /* ContentView.swift */; };
 		62926CC72804B4A60071525A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62926CC62804B4A60071525A /* Assets.xcassets */; };
 		62926CCA2804B4A60071525A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62926CC92804B4A60071525A /* Preview Assets.xcassets */; };
+		62A5B41B2806788F00443C81 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 62A5B41A2806788F00443C81 /* fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		62926CC42804B4A40071525A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		62926CC62804B4A60071525A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62926CC92804B4A60071525A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62A5B41A2806788F00443C81 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				62681D1D2804B9DD001129B1 /* SignInView.swift */,
 				62681D1F2804BA02001129B1 /* HomeView.swift */,
 				62926CC62804B4A60071525A /* Assets.xcassets */,
+				62A5B41A2806788F00443C81 /* fonts */,
 				62926CC82804B4A60071525A /* Preview Content */,
 			);
 			path = "fp22-happ";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62926CCA2804B4A60071525A /* Preview Assets.xcassets in Resources */,
+				62A5B41B2806788F00443C81 /* fonts in Resources */,
 				62926CC72804B4A60071525A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +292,7 @@
 				DEVELOPMENT_TEAM = 96P36NZQGS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "fp22-happ/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,6 +322,7 @@
 				DEVELOPMENT_TEAM = 96P36NZQGS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "fp22-happ/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
