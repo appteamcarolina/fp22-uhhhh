@@ -16,7 +16,7 @@ struct WelcomeView: View {
                 .font(.custom("Kollektif", size: 70))
                 .padding(.vertical, 50)
             Button {
-                //
+                // Go to SignUpView
             } label: {
                 Text("Get Started")
                     .font(.custom("Kollektif", size: 20))
