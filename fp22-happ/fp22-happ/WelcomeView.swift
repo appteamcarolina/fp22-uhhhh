@@ -15,8 +15,9 @@ struct WelcomeView: View {
             Text("Happ")
                 .font(.custom("Kollektif", size: 70))
                 .padding(.vertical, 50)
-            Button {
-                // Go to SignUpView
+            
+            NavigationLink {
+                SignUpView(username: "", password: "")
             } label: {
                 Text("Get Started")
                     .font(.custom("Kollektif", size: 20))
@@ -30,7 +31,7 @@ struct WelcomeView: View {
                                     .frame(width: 200)
                             )
             }
-            
+
             Spacer()
             
             Text("Stay Updated On Events Happening Near You")

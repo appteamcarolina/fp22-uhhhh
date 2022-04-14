@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62105DF22808ADE700E313B0 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62105DF12808ADE700E313B0 /* AccountView.swift */; };
+		62105DF42808ADF400E313B0 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62105DF32808ADF400E313B0 /* SearchView.swift */; };
+		62105DF62808AE8700E313B0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62105DF52808AE8700E313B0 /* MapView.swift */; };
 		6241694D28070C0500BD48A9 /* Kollektif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6241694928070C0500BD48A9 /* Kollektif.ttf */; };
 		6241694E28070C0500BD48A9 /* Kollektif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6241694A28070C0500BD48A9 /* Kollektif-BoldItalic.ttf */; };
 		6241694F28070C0500BD48A9 /* Kollektif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6241694B28070C0500BD48A9 /* Kollektif-Italic.ttf */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62105DF12808ADE700E313B0 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		62105DF32808ADF400E313B0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		62105DF52808AE8700E313B0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6241694928070C0500BD48A9 /* Kollektif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kollektif.ttf; sourceTree = "<group>"; };
 		6241694A28070C0500BD48A9 /* Kollektif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kollektif-BoldItalic.ttf"; sourceTree = "<group>"; };
 		6241694B28070C0500BD48A9 /* Kollektif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kollektif-Italic.ttf"; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 				62681D1B2804B9D0001129B1 /* SignUpView.swift */,
 				62681D1D2804B9DD001129B1 /* SignInView.swift */,
 				62681D1F2804BA02001129B1 /* HomeView.swift */,
+				62105DF52808AE8700E313B0 /* MapView.swift */,
+				62105DF12808ADE700E313B0 /* AccountView.swift */,
+				62105DF32808ADF400E313B0 /* SearchView.swift */,
 				6241694828070C0500BD48A9 /* kollektif */,
 				62926CC62804B4A60071525A /* Assets.xcassets */,
 				62926CC82804B4A60071525A /* Preview Content */,
@@ -177,7 +186,10 @@
 				62926CC52804B4A40071525A /* ContentView.swift in Sources */,
 				62681D1A2804B928001129B1 /* WelcomeView.swift in Sources */,
 				62681D202804BA02001129B1 /* HomeView.swift in Sources */,
+				62105DF42808ADF400E313B0 /* SearchView.swift in Sources */,
+				62105DF22808ADE700E313B0 /* AccountView.swift in Sources */,
 				62926CC32804B4A40071525A /* fp22_happApp.swift in Sources */,
+				62105DF62808AE8700E313B0 /* MapView.swift in Sources */,
 				62681D1E2804B9DD001129B1 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

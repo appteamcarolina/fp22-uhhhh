@@ -36,16 +36,18 @@ struct SignUpView: View {
             TextField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .padding([.horizontal, .bottom])
-
-                Button(action: {}) {
-                    Text("Create Account")
-                        .bold()
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 12)
-                        .background(.black)
-                        .cornerRadius(8)
-                        .foregroundColor(.white)
-                }
+            
+            NavigationLink {
+                HomeView()
+            } label: {
+                Text("Create Account")
+                    .bold()
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 12)
+                    .background(.black)
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+            }
 
             HStack {
                 Text("Already have an account?")
