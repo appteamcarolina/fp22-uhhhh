@@ -9,7 +9,26 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-        Text("Account")
+        VStack(alignment: .center) {
+            Image("alecbby")
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 200, height: 120, alignment: .center)
+            .clipShape(Circle())
+            .padding(.top)
+            
+            Text("Alec Alec")
+                .font(.title)
+            
+            
+            HStack {
+                Text("Saved Events")
+                    .font(.title)
+                    .bold()
+            }
+            
+        }
     }
 }
 
