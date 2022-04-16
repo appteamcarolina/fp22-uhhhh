@@ -22,9 +22,16 @@
 		62926CC52804B4A40071525A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62926CC42804B4A40071525A /* ContentView.swift */; };
 		62926CC72804B4A60071525A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62926CC62804B4A60071525A /* Assets.xcassets */; };
 		62926CCA2804B4A60071525A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62926CC92804B4A60071525A /* Preview Assets.xcassets */; };
+		7BB5EBDC8C9895E560F0F1B4 /* Pods_fp22_happ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99539E1E412DE26AE8DBF69E /* Pods_fp22_happ.framework */; };
+		F671FE46280B807F00F0A91B /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE45280B807F00F0A91B /* MapViewModel.swift */; };
+		F671FE48280B80A100F0A91B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE47280B80A100F0A91B /* Profile.swift */; };
+		F671FE4A280B80B800F0A91B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE49280B80B800F0A91B /* Event.swift */; };
+		F671FE4C280B80EA00F0A91B /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4B280B80EA00F0A91B /* FirebaseService.swift */; };
+		F671FE4E280B811200F0A91B /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4D280B811200F0A91B /* EventAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042CDB22CBE0CAC1A4287F83 /* Pods-fp22-happ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp22-happ.debug.xcconfig"; path = "Target Support Files/Pods-fp22-happ/Pods-fp22-happ.debug.xcconfig"; sourceTree = "<group>"; };
 		62105DF12808ADE700E313B0 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		62105DF32808ADF400E313B0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		62105DF52808AE8700E313B0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -41,6 +48,13 @@
 		62926CC42804B4A40071525A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		62926CC62804B4A60071525A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62926CC92804B4A60071525A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99539E1E412DE26AE8DBF69E /* Pods_fp22_happ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fp22_happ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FFA92B9EFBDABC67A4D50B /* Pods-fp22-happ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp22-happ.release.xcconfig"; path = "Target Support Files/Pods-fp22-happ/Pods-fp22-happ.release.xcconfig"; sourceTree = "<group>"; };
+		F671FE45280B807F00F0A91B /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		F671FE47280B80A100F0A91B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F671FE49280B80B800F0A91B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F671FE4B280B80EA00F0A91B /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		F671FE4D280B811200F0A91B /* EventAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB5EBDC8C9895E560F0F1B4 /* Pods_fp22_happ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +85,8 @@
 			children = (
 				62926CC12804B4A40071525A /* fp22-happ */,
 				62926CC02804B4A40071525A /* Products */,
+				DBAF5DA3AB5DFA9343BC4E90 /* Pods */,
+				BD8D66B2C56B33DF9BE7C46F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,14 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				62926CC22804B4A40071525A /* fp22_happApp.swift */,
-				62926CC42804B4A40071525A /* ContentView.swift */,
-				62681D192804B928001129B1 /* WelcomeView.swift */,
-				62681D1B2804B9D0001129B1 /* SignUpView.swift */,
-				62681D1D2804B9DD001129B1 /* SignInView.swift */,
-				62681D1F2804BA02001129B1 /* HomeView.swift */,
-				62105DF52808AE8700E313B0 /* MapView.swift */,
-				62105DF32808ADF400E313B0 /* SearchView.swift */,
-				62105DF12808ADE700E313B0 /* AccountView.swift */,
+				F671FE44280B807200F0A91B /* ViewModels */,
+				F671FE43280B806B00F0A91B /* Models */,
+				F671FE42280B805600F0A91B /* Views */,
 				6241694828070C0500BD48A9 /* kollektif */,
 				62926CC62804B4A60071525A /* Assets.xcassets */,
 				62926CC82804B4A60071525A /* Preview Content */,
@@ -108,6 +120,57 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BD8D66B2C56B33DF9BE7C46F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99539E1E412DE26AE8DBF69E /* Pods_fp22_happ.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBAF5DA3AB5DFA9343BC4E90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				042CDB22CBE0CAC1A4287F83 /* Pods-fp22-happ.debug.xcconfig */,
+				D8FFA92B9EFBDABC67A4D50B /* Pods-fp22-happ.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F671FE42280B805600F0A91B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62105DF12808ADE700E313B0 /* AccountView.swift */,
+				62105DF32808ADF400E313B0 /* SearchView.swift */,
+				62105DF52808AE8700E313B0 /* MapView.swift */,
+				62681D1F2804BA02001129B1 /* HomeView.swift */,
+				62681D1D2804B9DD001129B1 /* SignInView.swift */,
+				62681D1B2804B9D0001129B1 /* SignUpView.swift */,
+				62681D192804B928001129B1 /* WelcomeView.swift */,
+				62926CC42804B4A40071525A /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F671FE43280B806B00F0A91B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F671FE47280B80A100F0A91B /* Profile.swift */,
+				F671FE49280B80B800F0A91B /* Event.swift */,
+				F671FE4B280B80EA00F0A91B /* FirebaseService.swift */,
+				F671FE4D280B811200F0A91B /* EventAPI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F671FE44280B807200F0A91B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F671FE45280B807F00F0A91B /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62926CCD2804B4A60071525A /* Build configuration list for PBXNativeTarget "fp22-happ" */;
 			buildPhases = (
+				B978FC122D898D41D9F78F38 /* [CP] Check Pods Manifest.lock */,
 				62926CBB2804B4A40071525A /* Sources */,
 				62926CBC2804B4A40071525A /* Frameworks */,
 				62926CBD2804B4A40071525A /* Resources */,
+				C7B950758199743E15B5CC0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,18 +242,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B978FC122D898D41D9F78F38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fp22-happ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7B950758199743E15B5CC0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fp22-happ/Pods-fp22-happ-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fp22-happ/Pods-fp22-happ-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fp22-happ/Pods-fp22-happ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62926CBB2804B4A40071525A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				62681D1C2804B9D0001129B1 /* SignUpView.swift in Sources */,
+				F671FE4E280B811200F0A91B /* EventAPI.swift in Sources */,
+				F671FE46280B807F00F0A91B /* MapViewModel.swift in Sources */,
 				62926CC52804B4A40071525A /* ContentView.swift in Sources */,
 				62681D1A2804B928001129B1 /* WelcomeView.swift in Sources */,
+				F671FE4A280B80B800F0A91B /* Event.swift in Sources */,
 				62681D202804BA02001129B1 /* HomeView.swift in Sources */,
 				62105DF42808ADF400E313B0 /* SearchView.swift in Sources */,
+				F671FE4C280B80EA00F0A91B /* FirebaseService.swift in Sources */,
 				62105DF22808ADE700E313B0 /* AccountView.swift in Sources */,
 				62926CC32804B4A40071525A /* fp22_happApp.swift in Sources */,
+				F671FE48280B80A100F0A91B /* Profile.swift in Sources */,
 				62105DF62808AE8700E313B0 /* MapView.swift in Sources */,
 				62681D1E2804B9DD001129B1 /* SignInView.swift in Sources */,
 			);
@@ -315,6 +427,7 @@
 		};
 		62926CCE2804B4A60071525A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042CDB22CBE0CAC1A4287F83 /* Pods-fp22-happ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +438,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fp22-happ/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide the events happening near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,6 +460,7 @@
 		};
 		62926CCF2804B4A60071525A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8FFA92B9EFBDABC67A4D50B /* Pods-fp22-happ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -355,6 +471,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fp22-happ/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide the events happening near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
