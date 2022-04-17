@@ -28,6 +28,7 @@
 		F671FE4A280B80B800F0A91B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE49280B80B800F0A91B /* Event.swift */; };
 		F671FE4C280B80EA00F0A91B /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4B280B80EA00F0A91B /* FirebaseService.swift */; };
 		F671FE4E280B811200F0A91B /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4D280B811200F0A91B /* EventAPI.swift */; };
+		F671FE50280C5BF800F0A91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F671FE4F280C5BF800F0A91B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		F671FE49280B80B800F0A91B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F671FE4B280B80EA00F0A91B /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		F671FE4D280B811200F0A91B /* EventAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
+		F671FE4F280C5BF800F0A91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				62926CC22804B4A40071525A /* fp22_happApp.swift */,
+				F671FE4F280C5BF800F0A91B /* GoogleService-Info.plist */,
 				F671FE44280B807200F0A91B /* ViewModels */,
 				F671FE43280B806B00F0A91B /* Models */,
 				F671FE42280B805600F0A91B /* Views */,
@@ -237,6 +240,7 @@
 				62926CCA2804B4A60071525A /* Preview Assets.xcassets in Resources */,
 				62926CC72804B4A60071525A /* Assets.xcassets in Resources */,
 				6241694F28070C0500BD48A9 /* Kollektif-Italic.ttf in Resources */,
+				F671FE50280C5BF800F0A91B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,12 +438,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fp22-happ/Preview Content\"";
-				DEVELOPMENT_TEAM = 96P36NZQGS;
+				DEVELOPMENT_TEAM = MUU5R72BC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fp22-happ/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide the events happening near you.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide the events happening near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,12 +471,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fp22-happ/Preview Content\"";
-				DEVELOPMENT_TEAM = 96P36NZQGS;
+				DEVELOPMENT_TEAM = MUU5R72BC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "fp22-happ/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide the events happening near you.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide the events happening near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

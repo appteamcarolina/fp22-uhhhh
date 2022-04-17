@@ -11,7 +11,7 @@ import MapKit
 struct HomeView: View {
     var body: some View {
         TabView {
-            MapView(coordinate: CLLocationCoordinate2D(latitude: 35.9132, longitude: -79.0558))
+            MapView()
                 .tabItem {
                     VStack {
                         Image(systemName: "map")
