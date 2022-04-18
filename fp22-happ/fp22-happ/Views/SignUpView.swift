@@ -58,13 +58,16 @@ struct SignUpView: View {
                     .cornerRadius(8)
                     .foregroundColor(.white)
             }
+            .padding()
 
             HStack {
                 Text("Already have an account?")
                 NavigationLink {
                     SignInView(vm: vm,email: email, password: password)
                 } label: {
-                    Text("Sign In").bold()
+                    Text("Sign In")
+                        .bold()
+                        .foregroundColor(.primary)
                 }
             }
             
