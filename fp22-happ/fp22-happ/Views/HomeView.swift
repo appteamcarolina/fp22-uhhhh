@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 
 struct HomeView: View {
+    var vm: AuthViewModel
     var body: some View {
         TabView {
             MapView()
@@ -25,7 +26,7 @@ struct HomeView: View {
                         Text("Search")
                 }
             }
-            AccountView()
+            AccountView(vm: vm)
                 .tabItem {
                     VStack {
                         Image(systemName: "person")
@@ -39,6 +40,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(vm: AuthViewModel())
     }
 }

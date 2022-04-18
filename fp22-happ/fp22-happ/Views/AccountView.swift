@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AccountView: View {
+    var vm: AuthViewModel
     var body: some View {
         VStack(alignment: .center) {
             Image("alecbby")
@@ -27,6 +28,14 @@ struct AccountView: View {
                     .font(.title)
                     .bold()
             }
+            Button(action: {vm.signOut()}) {
+                Text("Sign Out")
+                    .bold()
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 12)
+                    .cornerRadius(8)
+                    .foregroundColor(.black)
+            }
             
         }
     }
@@ -34,6 +43,6 @@ struct AccountView: View {
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView()
+        AccountView(vm: AuthViewModel())
     }
 }

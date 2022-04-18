@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Event: Codable {
+    var name: String
+    
+}

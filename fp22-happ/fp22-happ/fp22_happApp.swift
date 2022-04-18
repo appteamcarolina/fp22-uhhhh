@@ -14,9 +14,12 @@ struct fp22_happApp: App {
     init() {
         FirebaseApp.configure()
     }
+    
     var body: some Scene {
         WindowGroup {
+            let authViewModel = AuthViewModel()
             ContentView()
+                .environmentObject(authViewModel)
         }
     }
 }

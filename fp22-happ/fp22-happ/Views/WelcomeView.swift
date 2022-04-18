@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    var vm: AuthViewModel
     var body: some View {
         VStack {
             Spacer()
@@ -17,7 +18,7 @@ struct WelcomeView: View {
                 .padding(.vertical, 50)
             
             NavigationLink {
-                SignUpView(username: "", password: "")
+                SignUpView(email: "", password: "",vm: vm)
             } label: {
                 Text("Get Started")
                     .font(.custom("Kollektif", size: 20))
@@ -45,6 +46,6 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(vm: AuthViewModel())
     }
 }

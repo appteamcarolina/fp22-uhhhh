@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @State var username: String
+    @State var email: String
     @State var password: String
+    var vm: AuthViewModel
     
     var body: some View {
         VStack {
@@ -22,23 +24,31 @@ struct SignUpView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.all)
             
-            Text("Username:")
+            Text("Email:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
-            TextField("Username", text: $username)
+            TextField("Email", text: $email)
                 .textFieldStyle(.roundedBorder)
                 .padding([.horizontal, .bottom])
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
             
             Text("Password:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
+                
             
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .padding([.horizontal, .bottom])
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
             
-            NavigationLink {
-                HomeView()
+            Button {
+                if (email != "") && (password != "") {
+                    vm.signUp(email: email, password: password)
+                    presentationMode.wrappedValue.dismiss()
+                }
             } label: {
                 Text("Create Account")
                     .bold()
@@ -51,13 +61,10 @@ struct SignUpView: View {
 
             HStack {
                 Text("Already have an account?")
-                Button(action: {}) {
-                    Text("Sign In")
-                        .bold()
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 12)
-                        .cornerRadius(8)
-                        .foregroundColor(.black)
+                NavigationLink {
+                    SignInView(vm: vm,email: email, password: password)
+                } label: {
+                    Text("Sign In").bold()
                 }
             }
             
@@ -69,6 +76,6 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(username: "", password: "")
+        SignUpView(email: "", password: "", vm: AuthViewModel())
     }
 }

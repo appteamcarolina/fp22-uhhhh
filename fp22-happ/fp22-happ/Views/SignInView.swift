@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SignInView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @State var username: String
+    var vm: AuthViewModel
+    @State var email: String
     @State var password: String
     
     var body: some View {
@@ -22,25 +24,29 @@ struct SignInView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.all)
             
-            Text("Username:")
+            Text("Email:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
-            TextField("Username", text: $username)
+            TextField("Email", text: $email)
                 .textFieldStyle(.roundedBorder)
                 .padding([.horizontal, .bottom])
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
             
             Text("Password:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
             
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .padding([.horizontal, .bottom])
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
 
             HStack {
                 Text("Forgot Password?")
                     .padding(.horizontal)
-                Button(action: {}) {
+                Button(action: {vm.signIn(email: email, password: password)}) {
                         Text("Login")
                             .bold()
                             .padding(.vertical, 6)
@@ -53,7 +59,7 @@ struct SignInView: View {
 
             HStack {
                 Text("Don't have an account?")
-                Button(action: {}) {
+                Button(action: {presentationMode.wrappedValue.dismiss()}) {
                     Text("Create one")
                         .bold()
                         .padding(.vertical, 6)
@@ -71,6 +77,6 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(username: "", password: "")
+        SignInView(vm: AuthViewModel(), email: "", password: "")
     }
 }

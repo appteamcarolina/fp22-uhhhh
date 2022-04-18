@@ -7,4 +7,6 @@ target 'fp22-happ' do
 
   # Pods for fp22-happ
   pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 end
