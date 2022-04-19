@@ -18,7 +18,8 @@ struct HomeView: View {
                         Image(systemName: "map")
                         Text("Map")
                     }
-                }.ignoresSafeArea()
+                }
+                .ignoresSafeArea()
             SearchView()
                 .tabItem {
                     VStack {
