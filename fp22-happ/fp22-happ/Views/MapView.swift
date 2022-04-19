@@ -16,7 +16,8 @@ struct MapView: View {
     
     @State var eventName: String = ""
     @State var eventAddress: String = ""
-    @State private var date = Date()
+    @State private var startDate = Date()
+    @State private var endDate = Date()
     
     var body: some View {
     
@@ -41,7 +42,7 @@ struct MapView: View {
                         .foregroundColor(.black)
                 }
             }
-            .frame(width: 350, height: 750, alignment: .bottomTrailing)
+            .frame(width: 350, height: 700, alignment: .bottomTrailing)
             .sheet(isPresented: $showEventSheet, onDismiss: didDismiss) {
                 // Add code for sheet UI
                 VStack {
@@ -49,10 +50,12 @@ struct MapView: View {
                     Text("Add Event")
                         .font(.title)
                         .bold()
+                        .padding()
                     
-                    Text("Name:")
+                    Text("Name")
                         .font(.headline)
                         .bold()
+                        .padding()
                     
                     TextField("Enter Event Name", text: $eventName)
                         .textFieldStyle(.roundedBorder)
@@ -61,28 +64,33 @@ struct MapView: View {
                     Text("Date Range")
                         .font(.headline)
                         .bold()
+                        .padding()
                     
-                    DatePicker("Start Date", selection: $date, displayedComponents: [.date])
+                    DatePicker("Start Date", selection: $startDate, displayedComponents: [.date])
+                        .padding()
                     
-                    DatePicker("End Date", selection: $date, displayedComponents: [.date])
+                    DatePicker("End Date", selection: $endDate, displayedComponents: [.date])
+                        .padding()
                     
                     Text("Location")
                         .font(.headline)
                         .bold()
+                        .padding()
                     
                     TextField("Enter Event Address", text: $eventAddress)
                         .textFieldStyle(.roundedBorder)
                         .padding([.horizontal, .bottom])
+                        .padding()
                     
                     Text("Category")
                         .font(.headline)
                         .bold()
+                        .padding()
                     
 //                    Picker("Event Category (Choose one)", selection: <#T##Binding<_>#>, content: <#T##() -> _#>)
                     
-                    
-                    
                 }
+                .padding()
             }
         }
     }
