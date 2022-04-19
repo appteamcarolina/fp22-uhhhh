@@ -34,7 +34,7 @@ struct HomeView: View {
                         Text("Account")
                 }
             }
-        }.accentColor(.black)
+        }.accentColor(.primary)
         .navigationBarBackButtonHidden(true)
     }
 }

@@ -92,7 +92,7 @@ struct MapView: View {
                 }
                 .padding()
             }
-        }
+        }.ignoresSafeArea()
     }
     
     func didDismiss() {

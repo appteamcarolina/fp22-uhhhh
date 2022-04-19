@@ -51,9 +51,8 @@ struct SignInView: View {
                             .bold()
                             .padding(.vertical, 6)
                             .padding(.horizontal, 12)
-                            .background(.black)
                             .cornerRadius(8)
-                            .foregroundColor(.white)
+                            .foregroundColor(.primary)
                 }
             }
             .padding()

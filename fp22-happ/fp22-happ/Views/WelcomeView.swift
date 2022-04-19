@@ -24,14 +24,13 @@ struct WelcomeView: View {
                     .font(.custom("Kollektif", size: 20))
                     .padding(.vertical, 6)
                     .padding(.horizontal, 12)
-                    .background(.white)
                     .foregroundColor(.primary)
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
-                                    .stroke(.black, lineWidth: 1)
+                                    .stroke(.primary, lineWidth: 1)
                                     .frame(width: 200)
                             )
-            }
+            }.buttonStyle(PlainButtonStyle())
 
             Spacer()
             
