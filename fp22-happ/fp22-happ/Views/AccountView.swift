@@ -34,7 +34,7 @@ struct AccountView: View {
                     .padding(.vertical, 6)
                     .padding(.horizontal, 12)
                     .cornerRadius(8)
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
             }
             
         }

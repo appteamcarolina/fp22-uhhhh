@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import Firebase
 
 class AuthViewModel: ObservableObject {
     let auth = Auth.auth()
@@ -51,3 +52,33 @@ class AuthViewModel: ObservableObject {
     }
     
 }
+
+class firestoreManager {
+    func getGlobalEventData() {
+        let db = Firestore.firestore()
+        db.collection("")
+    }
+    
+    func addEvent(event: Event) {
+        guard let userID = Auth.auth().currentUser?.uid else {return}
+        let db = Firestore.firestore()
+        db.collection("globalEvents").document("\(event.eventCategory.rawValue)s").collection("eventList")
+            .addDocument(data: ["endTime":event.endTime.timeIntervalSince1970,
+                                "eventCategory":event.eventCategory.rawValue,
+                                "eventDesc":event.eventDesc,
+                                "eventHost":userID,
+                                "eventLocation":GeoPoint(latitude:event.eventLocation.coordinate.latitude,longitude: event.eventLocation.coordinate.longitude),
+                                "eventTitle":event.eventTitle,
+                                "numAttending":event.numAttending,
+                                "startTime":event.startTime.timeIntervalSince1970
+                               ]) { error in
+                if error == nil {
+                    self.getGlobalEventData()
+                }
+            }
+        
+    }
+    
+    
+}
+

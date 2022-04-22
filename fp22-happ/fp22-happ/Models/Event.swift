@@ -6,8 +6,29 @@
 //
 
 import Foundation
+import CoreLocation
 
-struct Event: Codable {
-    var name: String
+enum EventCategory: String, Equatable, CaseIterable {
+    case partyEvent = "partyEvent",
+         concertEvent = "concertEvent",
+         sportEvent = "sportEvent",
+         companyEvent = "companyEvent",
+         speakerEvent = "speakerEvent",
+         foodEvent = "foodEvent",
+         religiousEvent = "religiousEvent",
+         clubEvent = "clubEvent",
+         generalEvent = "generalEvent"
+}
+
+struct Event: Identifiable{
+    var id: String {eventHost}
+    var eventTitle: String
+    var eventDesc: String
+    var eventHost: String
+    var eventLocation: CLLocation
+    var eventCategory: EventCategory
+    var numAttending: Int
+    var startTime: Date
+    var endTime: Date
     
 }
