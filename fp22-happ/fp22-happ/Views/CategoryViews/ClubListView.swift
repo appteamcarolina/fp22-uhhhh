@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct ClubListView: View {
+    
     var vm: SearchViewModel
     
     var body: some View {
-        Text("Hello")
+        List {
+            ForEach(vm.list) { event in
+                ListItemView(event:event)
+            }
+        }
     }
 }
 
