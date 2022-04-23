@@ -58,13 +58,12 @@ class AuthViewModel: ObservableObject {
 class firestoreManager: ObservableObject{
     
     init() {
-        eventList = getGlobalEventData()
+        getGlobalEventData()
     }
     
     @Published var eventList = [Event]()
     @Published var eventLocationList = [CLLocationCoordinate2D]()
-    func getGlobalEventData() -> [Event] {
-        var retEvents = [Event]()
+    func getGlobalEventData() {
         let db = Firestore.firestore()
         //for category in EventCategory.allCases {
             db.collection("globalEvents").document("clubEvents").collection("eventList").getDocuments { snapshot, error in
@@ -74,7 +73,7 @@ class firestoreManager: ObservableObject{
                 }
                 if let snapshot = snapshot {
                     DispatchQueue.main.async {
-                        retEvents.append(contentsOf: snapshot.documents.map { d in
+                        self.eventList = snapshot.documents.map { d in
                             let position = d["eventLocation"] as? GeoPoint
                             let eventLocation = CLLocation(latitude: position?.latitude ?? 39.0, longitude: position?.longitude ?? -78.0)
                             let newEvent = Event(eventTitle: d["eventTitle"] as? String ?? "",
@@ -85,17 +84,14 @@ class firestoreManager: ObservableObject{
                                                  numAttending: d["numAttending"] as? Int ?? 0,
                                                  startTime: Date(timeIntervalSince1970: d["startTime"] as? Double ?? 0.0),
                                                  endTime: Date(timeIntervalSince1970: d["endTime"] as? Double ?? 0.0))
-                            print("success")
+                            //print("success")
                             return newEvent
-                        } as [Event])
+                        }
                     }
                     
                 }
             
             }
-            
-        
-        return retEvents
     }
     
     func addEvent(event: Event) {
@@ -112,7 +108,7 @@ class firestoreManager: ObservableObject{
                                 "startTime":event.startTime.timeIntervalSince1970
                                ]) { error in
                 if error == nil {
-                    self.eventList = self.getGlobalEventData()
+                    self.getGlobalEventData()
                 }
             }
         
