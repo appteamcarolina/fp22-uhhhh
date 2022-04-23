@@ -11,7 +11,7 @@ import MapKit
 struct MapView: View {
     
     @StateObject private var vm = MapViewModel()
-    
+    @ObservedObject private var fireManager = firestoreManager()
     @State private var showEventSheet: Bool = false
     
     @State var eventName: String = ""
@@ -20,10 +20,14 @@ struct MapView: View {
     @State private var endDate = Date()
     
     var body: some View {
-    
+        
         ZStack {
-            
-            Map(coordinateRegion: $vm.region,showsUserLocation: true).onAppear {
+            Map(coordinateRegion: $vm.region,
+                showsUserLocation: true,
+                annotationItems: fireManager.eventList,
+                annotationContent: { event in
+                MapMarker(coordinate: event.eventLocation.coordinate)
+            }).onAppear {
                 vm.checkIfLocationServicesIsEnabled()
             }.ignoresSafeArea()
             
@@ -35,7 +39,7 @@ struct MapView: View {
                     
                     Circle()
                         .foregroundColor(.white)
-                    .frame(width: 50, height: 50, alignment: .bottomTrailing)
+                        .frame(width: 50, height: 50, alignment: .bottomTrailing)
                     
                     Image(systemName: "plus")
                         .font(.system(size: 30))
@@ -45,7 +49,7 @@ struct MapView: View {
             .frame(width: 350, height: 700, alignment: .bottomTrailing)
             .sheet(isPresented: $showEventSheet, onDismiss: didDismiss) {
                 // Add code for sheet UI
-                NewEventSheetView(showEventSheet: $showEventSheet, vm: vm)
+                NewEventSheetView(showEventSheet: $showEventSheet, vm: vm,fireManager: fireManager)
             }
         }.ignoresSafeArea()
     }
@@ -54,13 +58,13 @@ struct MapView: View {
         // Handle the dismissing action
     }
     
-//    enum Category: String, CaseIterable, Identifiable {
-//        case Sports
-//        case Concerts
-//        case Professional
-//
-//        var id: String { self.rawValue }
-//    }
+    //    enum Category: String, CaseIterable, Identifiable {
+    //        case Sports
+    //        case Concerts
+    //        case Professional
+    //
+    //        var id: String { self.rawValue }
+    //    }
 }
 
 struct MapView_Previews: PreviewProvider {

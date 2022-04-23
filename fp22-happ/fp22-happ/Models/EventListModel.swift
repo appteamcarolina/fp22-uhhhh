@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct EventListModel {
+    var eventList = [Event]()
+}

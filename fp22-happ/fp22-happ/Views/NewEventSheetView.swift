@@ -12,6 +12,7 @@ import FirebaseAuth
 struct NewEventSheetView: View {
     @Binding var showEventSheet: Bool
     @State var vm: MapViewModel
+    @State var fireManager: firestoreManager
     @State var eventTitle = ""
     @State var eventDesc = ""
     //eventHost
@@ -21,11 +22,8 @@ struct NewEventSheetView: View {
     @State var endTime: Date = Date()
     @State var eventAddress: String = ""
     
-    let fireManager = firestoreManager()
-    
-    
     var body: some View {
-        VStack {
+        ScrollView {
             VStack {
                 
                 Group {
@@ -115,6 +113,6 @@ struct NewEventSheetView: View {
 
 struct NewEventSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        NewEventSheetView(showEventSheet: .constant(true), vm: MapViewModel())
+        NewEventSheetView(showEventSheet: .constant(true), vm: MapViewModel(),fireManager: firestoreManager())
     }
 }
