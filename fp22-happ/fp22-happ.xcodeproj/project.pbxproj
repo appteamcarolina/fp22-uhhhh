@@ -30,6 +30,17 @@
 		F671FE4C280B80EA00F0A91B /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4B280B80EA00F0A91B /* FirebaseService.swift */; };
 		F671FE4E280B811200F0A91B /* EventListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4D280B811200F0A91B /* EventListModel.swift */; };
 		F671FE50280C5BF800F0A91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F671FE4F280C5BF800F0A91B /* GoogleService-Info.plist */; };
+		F67DB82A2814750D00B4297A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB8292814750D00B4297A /* SearchViewModel.swift */; };
+		F67DB82D281477A500B4297A /* ConcertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB82C281477A500B4297A /* ConcertListView.swift */; };
+		F67DB82F281477BB00B4297A /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB82E281477BB00B4297A /* EventListView.swift */; };
+		F67DB831281477C200B4297A /* PartyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB830281477C200B4297A /* PartyListView.swift */; };
+		F67DB833281477D800B4297A /* CompanyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB832281477D800B4297A /* CompanyListView.swift */; };
+		F67DB835281477E200B4297A /* ClubListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB834281477E200B4297A /* ClubListView.swift */; };
+		F67DB837281477E900B4297A /* SpeakerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB836281477E900B4297A /* SpeakerListView.swift */; };
+		F67DB839281477FB00B4297A /* SportListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB838281477FB00B4297A /* SportListView.swift */; };
+		F67DB83B2814780600B4297A /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83A2814780600B4297A /* FoodListView.swift */; };
+		F67DB83D2814781000B4297A /* ReligiousListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83C2814781000B4297A /* ReligiousListView.swift */; };
+		F67DB83F28147D8100B4297A /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83E28147D8100B4297A /* ListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +70,17 @@
 		F671FE4B280B80EA00F0A91B /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		F671FE4D280B811200F0A91B /* EventListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListModel.swift; sourceTree = "<group>"; };
 		F671FE4F280C5BF800F0A91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F67DB8292814750D00B4297A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		F67DB82C281477A500B4297A /* ConcertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertListView.swift; sourceTree = "<group>"; };
+		F67DB82E281477BB00B4297A /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		F67DB830281477C200B4297A /* PartyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyListView.swift; sourceTree = "<group>"; };
+		F67DB832281477D800B4297A /* CompanyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListView.swift; sourceTree = "<group>"; };
+		F67DB834281477E200B4297A /* ClubListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubListView.swift; sourceTree = "<group>"; };
+		F67DB836281477E900B4297A /* SpeakerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerListView.swift; sourceTree = "<group>"; };
+		F67DB838281477FB00B4297A /* SportListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportListView.swift; sourceTree = "<group>"; };
+		F67DB83A2814780600B4297A /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
+		F67DB83C2814781000B4297A /* ReligiousListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligiousListView.swift; sourceTree = "<group>"; };
+		F67DB83E28147D8100B4297A /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				62105DF12808ADE700E313B0 /* AccountView.swift */,
+				F67DB82B2814778E00B4297A /* CategoryViews */,
 				62105DF32808ADF400E313B0 /* SearchView.swift */,
 				62105DF52808AE8700E313B0 /* MapView.swift */,
 				F63557E02812545C000B12A1 /* NewEventSheetView.swift */,
@@ -154,6 +177,7 @@
 				62681D1B2804B9D0001129B1 /* SignUpView.swift */,
 				62681D192804B928001129B1 /* WelcomeView.swift */,
 				62926CC42804B4A40071525A /* ContentView.swift */,
+				F67DB84028147D8700B4297A /* Helper Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,8 +197,33 @@
 			isa = PBXGroup;
 			children = (
 				F671FE45280B807F00F0A91B /* MapViewModel.swift */,
+				F67DB8292814750D00B4297A /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F67DB82B2814778E00B4297A /* CategoryViews */ = {
+			isa = PBXGroup;
+			children = (
+				F67DB82C281477A500B4297A /* ConcertListView.swift */,
+				F67DB82E281477BB00B4297A /* EventListView.swift */,
+				F67DB830281477C200B4297A /* PartyListView.swift */,
+				F67DB832281477D800B4297A /* CompanyListView.swift */,
+				F67DB834281477E200B4297A /* ClubListView.swift */,
+				F67DB836281477E900B4297A /* SpeakerListView.swift */,
+				F67DB838281477FB00B4297A /* SportListView.swift */,
+				F67DB83A2814780600B4297A /* FoodListView.swift */,
+				F67DB83C2814781000B4297A /* ReligiousListView.swift */,
+			);
+			path = CategoryViews;
+			sourceTree = "<group>";
+		};
+		F67DB84028147D8700B4297A /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				F67DB83E28147D8100B4297A /* ListItemView.swift */,
+			);
+			path = "Helper Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,19 +345,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DB83D2814781000B4297A /* ReligiousListView.swift in Sources */,
+				F67DB83F28147D8100B4297A /* ListItemView.swift in Sources */,
 				F63557E12812545C000B12A1 /* NewEventSheetView.swift in Sources */,
+				F67DB82F281477BB00B4297A /* EventListView.swift in Sources */,
 				62681D1C2804B9D0001129B1 /* SignUpView.swift in Sources */,
+				F67DB839281477FB00B4297A /* SportListView.swift in Sources */,
+				F67DB82A2814750D00B4297A /* SearchViewModel.swift in Sources */,
 				F671FE4E280B811200F0A91B /* EventListModel.swift in Sources */,
 				F671FE46280B807F00F0A91B /* MapViewModel.swift in Sources */,
 				62926CC52804B4A40071525A /* ContentView.swift in Sources */,
+				F67DB82D281477A500B4297A /* ConcertListView.swift in Sources */,
 				62681D1A2804B928001129B1 /* WelcomeView.swift in Sources */,
 				F671FE4A280B80B800F0A91B /* Event.swift in Sources */,
+				F67DB833281477D800B4297A /* CompanyListView.swift in Sources */,
+				F67DB83B2814780600B4297A /* FoodListView.swift in Sources */,
 				62681D202804BA02001129B1 /* HomeView.swift in Sources */,
 				62105DF42808ADF400E313B0 /* SearchView.swift in Sources */,
+				F67DB835281477E200B4297A /* ClubListView.swift in Sources */,
 				F671FE4C280B80EA00F0A91B /* FirebaseService.swift in Sources */,
 				62105DF22808ADE700E313B0 /* AccountView.swift in Sources */,
 				62926CC32804B4A40071525A /* fp22_happApp.swift in Sources */,
 				F671FE48280B80A100F0A91B /* Profile.swift in Sources */,
+				F67DB837281477E900B4297A /* SpeakerListView.swift in Sources */,
+				F67DB831281477C200B4297A /* PartyListView.swift in Sources */,
 				62105DF62808AE8700E313B0 /* MapView.swift in Sources */,
 				62681D1E2804B9DD001129B1 /* SignInView.swift in Sources */,
 			);

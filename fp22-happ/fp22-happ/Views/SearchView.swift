@@ -9,130 +9,168 @@ import SwiftUI
 import UIKit
 
 struct SearchView: View {
-    
+    @StateObject private var vm = SearchViewModel()
     var body: some View {
         
-        VStack {
-            
-            Text("Happening Near You")
-                .font(.title)
-                .bold()
-            HStack {
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("🎵")
-                    }
-                    
-                    Text("Concerts")
-                }
-                .padding()
+        NavigationView {
+            VStack {
                 
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("🎭")
-                    }
-                    
-                    Text("Events")
-                }
-                .padding()
-                
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("🍾")
-                    }
-                    
-                    Text("Parties")
-                }
-                .padding()
-            }
-            .padding()
-            
-            HStack {
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                        .frame(width: 75, height: 50)
-                        .overlay {
-                            Text("👨🏼‍💻")
+                Text("Happening Near You")
+                    .font(.title)
+                    .bold()
+                HStack {
+                    VStack {
+                        NavigationLink {
+                            ConcertListView()
                         }
+                         label: {RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("🎵")
+                        
+                        }
+                        }
+                        Text("Concerts")
+                    }
+                    .padding()
                     
-                    Text("Company")
+                    VStack {
+                        NavigationLink {
+                            EventListView()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("🎭")
+                            }
+                        }
+                        
+                        Text("Events")
+                    }
+                    .padding()
+                    
+                    VStack {
+                        NavigationLink {
+                            PartyListView()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("🍾")
+                            }
+                        }
+                        
+                        Text("Parties")
+                    }
+                    .padding()
                 }
                 .padding()
                 
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("📝")
+                HStack {
+                    VStack {
+                        NavigationLink {
+                            CompanyListView()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                                .frame(width: 75, height: 50)
+                                .overlay {
+                                    Text("👨🏼‍💻")
+                                }
+                        }
+                        
+                        Text("Company")
                     }
+                    .padding()
                     
-                    Text("Clubs")
+                    VStack {
+                        NavigationLink {
+                            ClubListView(vm:vm)
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("📝")
+                            }
+                        }
+                        
+                        Text("Clubs")
+                    }
+                    .padding()
+                    
+                    VStack {
+                        NavigationLink {
+                            SpeakerListView()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("🎤")
+                            }
+                        }
+                        
+                        Text("Speakers")
+                    }
+                    .padding()
                 }
                 .padding()
                 
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("🎤")
+                HStack {
+                    VStack {
+                        NavigationLink {
+                            SportListView()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("🏈")
+                            }
+                        }
+                        
+                        Text("Sports")
                     }
+                    .padding()
                     
-                    Text("Speakers")
+                    VStack {
+                        NavigationLink {
+                            FoodListView()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("🍕")
+                            }
+                        }
+                        
+                        Text("Food")
+                    }
+                    .padding()
+                    
+                    VStack {
+                        NavigationLink {
+                            ReligiousListView()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
+                            .frame(width: 75, height: 50)
+                            .overlay {
+                                Text("🙏🏻")
+                            }
+                        }
+                        
+                        Text("Religious")
+                    }
+                    .padding()
                 }
                 .padding()
             }
-            .padding()
-            
-            HStack {
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("🏈")
-                    }
-                    
-                    Text("Sports")
-                }
-                .padding()
-                
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("🍕")
-                    }
-                    
-                    Text("Food")
-                }
-                .padding()
-                
-                VStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.909))
-                    .frame(width: 75, height: 50)
-                    .overlay {
-                        Text("🙏🏻")
-                    }
-                    
-                    Text("Religious")
-                }
-                .padding()
-            }
-            .padding()
         }
     }
 }
