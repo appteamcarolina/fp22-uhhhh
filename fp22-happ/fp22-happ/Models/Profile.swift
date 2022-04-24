@@ -19,7 +19,7 @@ struct ProfileDataStore {
     }
     
     static func fetchName() -> String {
-        guard let ret = defaults.string(forKey: nameKey) else {return ""}
+        guard let ret = defaults.string(forKey: nameKey) else {return "Alec Alec"}
         return ret
     }
     
@@ -27,7 +27,7 @@ struct ProfileDataStore {
         defaults.set(string, forKey: instaHandleKey)
     }
     static func fetchInsta() -> String {
-        guard let ret = defaults.string(forKey: instaHandleKey) else {return ""}
+        guard let ret = defaults.string(forKey: instaHandleKey) else {return "@alecbbygurl69"}
         return ret
     }
 }

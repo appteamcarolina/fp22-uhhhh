@@ -22,6 +22,7 @@
 		62926CC52804B4A40071525A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62926CC42804B4A40071525A /* ContentView.swift */; };
 		62926CC72804B4A60071525A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62926CC62804B4A60071525A /* Assets.xcassets */; };
 		62926CCA2804B4A60071525A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62926CC92804B4A60071525A /* Preview Assets.xcassets */; };
+		62DBCB012815F5A500F58425 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DBCB002815F5A500F58425 /* ProfileEditView.swift */; };
 		62ED9547281483440068A2A8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62ED9546281483440068A2A8 /* Launch Screen.storyboard */; };
 		7BB5EBDC8C9895E560F0F1B4 /* Pods_fp22_happ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99539E1E412DE26AE8DBF69E /* Pods_fp22_happ.framework */; };
 		F63557E12812545C000B12A1 /* NewEventSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63557E02812545C000B12A1 /* NewEventSheetView.swift */; };
@@ -64,6 +65,7 @@
 		62926CC42804B4A40071525A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		62926CC62804B4A60071525A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62926CC92804B4A60071525A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62DBCB002815F5A500F58425 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
 		62ED9546281483440068A2A8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		99539E1E412DE26AE8DBF69E /* Pods_fp22_happ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fp22_happ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FFA92B9EFBDABC67A4D50B /* Pods-fp22-happ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp22-happ.release.xcconfig"; path = "Target Support Files/Pods-fp22-happ/Pods-fp22-happ.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				62105DF12808ADE700E313B0 /* AccountView.swift */,
+				62DBCB002815F5A500F58425 /* ProfileEditView.swift */,
 				F67DB82B2814778E00B4297A /* CategoryViews */,
 				62105DF32808ADF400E313B0 /* SearchView.swift */,
 				62105DF52808AE8700E313B0 /* MapView.swift */,
@@ -383,6 +386,7 @@
 				F67DB831281477C200B4297A /* PartyListView.swift in Sources */,
 				62105DF62808AE8700E313B0 /* MapView.swift in Sources */,
 				62681D1E2804B9DD001129B1 /* SignInView.swift in Sources */,
+				62DBCB012815F5A500F58425 /* ProfileEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

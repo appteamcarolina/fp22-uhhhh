@@ -22,23 +22,44 @@ struct AccountView: View {
             
             Text(avm.name)
                 .font(.title)
+                .bold()
+            
             Text(avm.instaHandle)
+                .padding(.bottom)
             
-            
-            HStack {
-                Text("Saved Events")
-                    .font(.title)
-                    .bold()
+                
+            NavigationLink {
+                ProfileEditView()
+            } label: {
+                Text("Edit Profile")
+                    .foregroundColor(.blue)
             }
+
+            
+            Divider()
+            
+                Text("Your Saved Events")
+                    .font(.title3)
+                    .frame(maxWidth: .infinity, maxHeight: .zero, alignment: .leading)
+                    .padding()
+            
+                Text("No Saved Events")
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, maxHeight: .zero, alignment: .leading)
+                    .padding()
+            
+            Spacer()
+            
+            Divider()
+            
             Button(action: {vm.signOut()}) {
                 Text("Sign Out")
                     .bold()
                     .padding(.vertical, 6)
                     .padding(.horizontal, 12)
                     .cornerRadius(8)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.red)
             }
-            
         }
     }
 }
