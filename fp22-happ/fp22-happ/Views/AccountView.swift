@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AccountView: View {
     var vm: AuthViewModel
+    var avm = AccountViewModel()
     var body: some View {
         VStack(alignment: .center) {
             Image("alecbby")
@@ -19,8 +20,9 @@ struct AccountView: View {
             .clipShape(Circle())
             .padding(.top)
             
-            Text("Alec Alec")
+            Text(avm.name)
                 .font(.title)
+            Text(avm.instaHandle)
             
             
             HStack {

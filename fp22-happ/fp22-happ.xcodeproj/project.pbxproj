@@ -43,6 +43,7 @@
 		F67DB83D2814781000B4297A /* ReligiousListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83C2814781000B4297A /* ReligiousListView.swift */; };
 		F67DB83F28147D8100B4297A /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83E28147D8100B4297A /* ListItemView.swift */; };
 		F67DB8422814DBB600B4297A /* EventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB8412814DBB600B4297A /* EventInfoView.swift */; };
+		F67F88D62815EE2200141900 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F88D52815EE2200141900 /* AccountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		F67DB83C2814781000B4297A /* ReligiousListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligiousListView.swift; sourceTree = "<group>"; };
 		F67DB83E28147D8100B4297A /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		F67DB8412814DBB600B4297A /* EventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoView.swift; sourceTree = "<group>"; };
+		F67F88D52815EE2200141900 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			children = (
 				F671FE45280B807F00F0A91B /* MapViewModel.swift */,
 				F67DB8292814750D00B4297A /* SearchViewModel.swift */,
+				F67F88D52815EE2200141900 /* AccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				62105DF22808ADE700E313B0 /* AccountView.swift in Sources */,
 				62926CC32804B4A40071525A /* fp22_happApp.swift in Sources */,
 				F671FE48280B80A100F0A91B /* Profile.swift in Sources */,
+				F67F88D62815EE2200141900 /* AccountViewModel.swift in Sources */,
 				F67DB837281477E900B4297A /* SpeakerListView.swift in Sources */,
 				F67DB8422814DBB600B4297A /* EventInfoView.swift in Sources */,
 				F67DB831281477C200B4297A /* PartyListView.swift in Sources */,

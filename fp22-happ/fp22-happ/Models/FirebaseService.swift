@@ -333,7 +333,7 @@ class firestoreManager: ObservableObject{
                 DispatchQueue.main.async {
                     self.religiousEventList = snapshot.documents.map { d in
                         let position = d["eventLocation"] as? GeoPoint
-                        let eventLocation = CLLocation(latitude: position?.latitude ?? 39.0, longitude: position?.longitude ?? -78.0)
+                        let eventLocation = CLLocation(latitude: position?.latitude ?? 35.0, longitude: position?.longitude ?? -79.0)
                         let newEvent = Event(eventTitle: d["eventTitle"] as? String ?? "",
                                              eventDesc: d["eventDesc"] as? String ?? "",
                                              eventHost: d["eventHost"] as? String ?? "",
