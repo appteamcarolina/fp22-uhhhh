@@ -18,8 +18,9 @@ struct ListItemView: View {
                     Spacer()
                     Text("Num Attending: \(event.numAttending)")
                 }
-                Text("\(event.eventDesc)").font(.subheadline)
-                Text("Location: \(event.eventLocation.coordinate.latitude), \(event.eventLocation.coordinate.longitude)")
+                Text("\(event.eventDesc)").font(.body)
+                
+                Text("Location: \(event.eventAddress)").font(.subheadline)
             }
             
             Spacer()
