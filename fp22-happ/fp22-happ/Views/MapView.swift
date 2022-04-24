@@ -38,7 +38,9 @@ struct MapView: View {
                 }
             }
             ).onAppear {
-                vm.checkIfLocationServicesIsEnabled()
+                if !vm.didCheckOnce {
+                    vm.checkIfLocationServicesIsEnabled()
+                }
             }.ignoresSafeArea()
             
             Button {

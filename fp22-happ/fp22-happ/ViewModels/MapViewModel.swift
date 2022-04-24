@@ -14,7 +14,7 @@ enum MapDetails {
 }
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
-    
+    @Published var didCheckOnce = false
     var locationManager: CLLocationManager?
     @Published var region = MKCoordinateRegion(center:MapDetails.defaultCenter, span:MapDetails.defaultSpan)
     
@@ -22,6 +22,7 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
             locationManager!.delegate = self
+            didCheckOnce = true
         } else {
             print("Location not enabled")
         }
