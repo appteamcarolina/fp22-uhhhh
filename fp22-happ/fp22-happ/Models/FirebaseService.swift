@@ -388,7 +388,31 @@ class firestoreManager: ObservableObject{
     }
     
     func rsvp(event: Event) {
-        
+        let db = Firestore.firestore()
+        let newNum = event.numAttending + 1
+        db.collection("globalEvents").document("\(event.eventCategory)").collection("eventList").document(event.id).setData(["numAttending": newNum], merge: true) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+        }
+            self.getAllEventData()
+            
+        }
+    }
+    
+    func unrsvp(event: Event) {
+        let db = Firestore.firestore()
+        if event.numAttending == 0 {
+            return
+        }
+        let newNum = event.numAttending - 1
+        db.collection("globalEvents").document("\(event.eventCategory)").collection("eventList").document(event.id).setData(["numAttending": newNum], merge: true) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            self.getAllEventData()
+        }
     }
 }
 
