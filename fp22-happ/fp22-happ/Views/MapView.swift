@@ -26,8 +26,15 @@ struct MapView: View {
                 showsUserLocation: true,
                 annotationItems: fireManager.eventList,
                 annotationContent: { event in
-                MapMarker(coordinate: event.eventLocation.coordinate)
-            }).onAppear {
+                MapAnnotation(coordinate: event.eventLocation.coordinate) {
+                    NavigationLink {
+                        EventInfoView(event: event)
+                    } label: {
+                        Image(systemName: "mappin.circle.fill")
+                    }
+                }
+            }
+            ).onAppear {
                 vm.checkIfLocationServicesIsEnabled()
             }.ignoresSafeArea()
             

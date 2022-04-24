@@ -42,6 +42,7 @@
 		F67DB83B2814780600B4297A /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83A2814780600B4297A /* FoodListView.swift */; };
 		F67DB83D2814781000B4297A /* ReligiousListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83C2814781000B4297A /* ReligiousListView.swift */; };
 		F67DB83F28147D8100B4297A /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB83E28147D8100B4297A /* ListItemView.swift */; };
+		F67DB8422814DBB600B4297A /* EventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB8412814DBB600B4297A /* EventInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		F67DB83A2814780600B4297A /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		F67DB83C2814781000B4297A /* ReligiousListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligiousListView.swift; sourceTree = "<group>"; };
 		F67DB83E28147D8100B4297A /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		F67DB8412814DBB600B4297A /* EventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				F67DB82B2814778E00B4297A /* CategoryViews */,
 				62105DF32808ADF400E313B0 /* SearchView.swift */,
 				62105DF52808AE8700E313B0 /* MapView.swift */,
+				F67DB8412814DBB600B4297A /* EventInfoView.swift */,
 				F63557E02812545C000B12A1 /* NewEventSheetView.swift */,
 				62681D1F2804BA02001129B1 /* HomeView.swift */,
 				62681D1D2804B9DD001129B1 /* SignInView.swift */,
@@ -372,6 +375,7 @@
 				62926CC32804B4A40071525A /* fp22_happApp.swift in Sources */,
 				F671FE48280B80A100F0A91B /* Profile.swift in Sources */,
 				F67DB837281477E900B4297A /* SpeakerListView.swift in Sources */,
+				F67DB8422814DBB600B4297A /* EventInfoView.swift in Sources */,
 				F67DB831281477C200B4297A /* PartyListView.swift in Sources */,
 				62105DF62808AE8700E313B0 /* MapView.swift in Sources */,
 				62681D1E2804B9DD001129B1 /* SignInView.swift in Sources */,
