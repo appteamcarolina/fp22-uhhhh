@@ -281,5 +281,16 @@ final class SearchViewModel: ObservableObject {
             }
         }
     }
+    func getAllEventLists() {
+        getConcertEventList()
+        getGeneralEventList()
+        getPartyEventList()
+        getCompanyEventList()
+        getClubEventList()
+        getSpeakerEventList()
+        getSportEventList()
+        getFoodEventList()
+        getReligiousEventList()
+    }
     
 }

@@ -168,6 +168,8 @@ struct SearchView: View {
                 .padding()
             }
             .padding()
+        }.onAppear{
+            vm.getAllEventLists()
         }
     }
 }

@@ -15,8 +15,6 @@ struct CompanyListView: View {
             ForEach(vm.companyEventList) { event in
                 ListItemView(event:event)
             }
-        }.onAppear {
-            vm.getCompanyEventList()
         }
     }
 }
