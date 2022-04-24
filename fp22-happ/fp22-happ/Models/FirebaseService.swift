@@ -386,6 +386,10 @@ class firestoreManager: ObservableObject{
             }
         
     }
+    
+    func rsvp(event: Event) {
+        
+    }
 }
 
 
