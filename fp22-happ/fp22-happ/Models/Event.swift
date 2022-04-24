@@ -21,7 +21,7 @@ enum EventCategory: String, Equatable, CaseIterable {
 }
 
 struct Event: Identifiable{
-    var id: String {eventHost}
+    var id: String {eventTitle}
     var eventTitle: String
     var eventDesc: String
     var eventHost: String

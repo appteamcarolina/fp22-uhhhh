@@ -19,13 +19,15 @@ struct MapView: View {
     @State private var startDate = Date()
     @State private var endDate = Date()
     
+    
     var body: some View {
         
         ZStack {
             Map(coordinateRegion: $vm.region,
                 showsUserLocation: true,
-                annotationItems: fireManager.eventList,
+                annotationItems: fireManager.concertEventList+fireManager.generalEventList+fireManager.partyEventList+fireManager.companyEventList+fireManager.clubEventList+fireManager.speakerEventList+fireManager.sportEventList+fireManager.foodEventList+fireManager.religiousEventList,
                 annotationContent: { event in
+                
                 MapAnnotation(coordinate: event.eventLocation.coordinate) {
                     NavigationLink {
                         EventInfoView(event: event)
