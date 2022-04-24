@@ -9,9 +9,103 @@ import SwiftUI
 import MapKit
 
 struct EventInfoView: View {
+    
     var event: Event
+    
     var body: some View {
-        Text(event.eventTitle)
+        ScrollView(.vertical) {
+            VStack {
+                
+                Text("Event Information")
+                    .font(.title)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                
+                Divider()
+                
+                Text("Event Name")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .padding(.bottom, 5.0)
+                    .foregroundColor(.gray)
+                
+                Text(event.eventTitle)
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                    .padding(.horizontal)
+                
+                Text("Event Host")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .padding(.bottom, 5.0)
+                    .foregroundColor(.gray)
+                
+                Text(event.eventHost)
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                    .padding(.horizontal)
+                
+                Text("Event Address")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .padding(.bottom, 5.0)
+                    .foregroundColor(.gray)
+                
+                Text(
+    """
+    555 Paul Hardin Drive \
+    Chapel Hill, NC 27514
+    """
+                )
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                    .padding(.horizontal)
+                
+                Text("Event Description")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .padding(.bottom, 5.0)
+                    .foregroundColor(.gray)
+                
+                Text(event.eventDesc)
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                    .padding(.horizontal)
+                
+            }
+            
+            VStack {
+                Text("Number Attending")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .padding(.bottom, 5.0)
+                    .foregroundColor(.gray)
+                
+                Text(String(event.numAttending))
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                    .padding(.horizontal)
+            }
+        }
+        
+        
+        Spacer()
     }
 }
 
