@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct CompanyListView: View {
+    var vm: SearchViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(vm.companyEventList) { event in
+                ListItemView(event:event)
+            }
+        }.onAppear {
+            vm.getCompanyEventList()
+        }
     }
 }
 
 struct CompanyListView_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyListView()
+        CompanyListView(vm:SearchViewModel())
     }
 }

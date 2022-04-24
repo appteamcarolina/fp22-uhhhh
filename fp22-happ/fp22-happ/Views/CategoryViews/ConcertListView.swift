@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ConcertListView: View {
     
+    var vm: SearchViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(vm.concertEventList) { event in
+                ListItemView(event:event)
+            }
+        }.onAppear {
+            vm.getConcertEventList()
+        }
     }
 }
 
 struct ConcertListView_Previews: PreviewProvider {
     static var previews: some View {
-        ConcertListView()
+        ConcertListView(vm:SearchViewModel())
     }
 }

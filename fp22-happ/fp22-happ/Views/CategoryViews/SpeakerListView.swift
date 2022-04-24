@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct SpeakerListView: View {
+    var vm: SearchViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(vm.speakerEventList) { event in
+                ListItemView(event:event)
+            }
+        }.onAppear {
+            vm.getSpeakerEventList()
+        }
     }
 }
 
 struct SpeakerListView_Previews: PreviewProvider {
     static var previews: some View {
-        SpeakerListView()
+        SpeakerListView(vm:SearchViewModel())
     }
 }

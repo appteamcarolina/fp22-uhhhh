@@ -100,7 +100,7 @@ struct NewEventSheetView: View {
                         self.eventLocation = location
                         
                         
-                        let event = Event(eventTitle: eventTitle, eventDesc: eventDesc, eventHost: userID , eventLocation: eventLocation, eventCategory: eventCategory, numAttending: 0, startTime: startTime, endTime: endTime)
+                        let event = Event(eventTitle: eventTitle, eventDesc: eventDesc, eventHost: userID , eventLocation: eventLocation, eventCategory: eventCategory, numAttending: 0, startTime: startTime, endTime: endTime, eventAddress: eventAddress)
                         fireManager.addEvent(event: event)
                         showEventSheet.toggle()
                     })

@@ -30,5 +30,6 @@ struct Event: Identifiable{
     var numAttending: Int
     var startTime: Date
     var endTime: Date
+    var eventAddress: String
     
 }

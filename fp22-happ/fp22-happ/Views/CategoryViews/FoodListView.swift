@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct FoodListView: View {
+    var vm: SearchViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(vm.foodEventList) { event in
+                ListItemView(event:event)
+            }
+        }.onAppear {
+            vm.getFoodEventList()
+        }
     }
 }
 
 struct FoodListView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodListView()
+        FoodListView(vm:SearchViewModel())
     }
 }

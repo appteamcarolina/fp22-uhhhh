@@ -83,7 +83,8 @@ class firestoreManager: ObservableObject{
                                                  eventCategory: d["eventCategory"] as? EventCategory ?? EventCategory.clubEvent,
                                                  numAttending: d["numAttending"] as? Int ?? 0,
                                                  startTime: Date(timeIntervalSince1970: d["startTime"] as? Double ?? 0.0),
-                                                 endTime: Date(timeIntervalSince1970: d["endTime"] as? Double ?? 0.0))
+                                                 endTime: Date(timeIntervalSince1970: d["endTime"] as? Double ?? 0.0),
+                                                 eventAddress: d["eventAddress"] as? String ?? "")
                             //print("success")
                             return newEvent
                         }
@@ -105,7 +106,8 @@ class firestoreManager: ObservableObject{
                                 "eventLocation":GeoPoint(latitude:event.eventLocation.coordinate.latitude,longitude: event.eventLocation.coordinate.longitude),
                                 "eventTitle":event.eventTitle,
                                 "numAttending":event.numAttending,
-                                "startTime":event.startTime.timeIntervalSince1970
+                                "startTime":event.startTime.timeIntervalSince1970,
+                                "eventAddress":event.eventAddress
                                ]) { error in
                 if error == nil {
                     self.getGlobalEventData()

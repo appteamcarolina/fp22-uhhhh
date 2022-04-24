@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct PartyListView: View {
+    var vm: SearchViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(vm.partyEventList) { event in
+                ListItemView(event:event)
+            }
+        }.onAppear {
+            vm.getPartyEventList()
+        }
     }
 }
 
 struct PartyListView_Previews: PreviewProvider {
     static var previews: some View {
-        PartyListView()
+        PartyListView(vm:SearchViewModel())
     }
 }

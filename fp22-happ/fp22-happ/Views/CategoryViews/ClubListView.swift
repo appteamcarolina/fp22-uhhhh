@@ -13,9 +13,11 @@ struct ClubListView: View {
     
     var body: some View {
         List {
-            ForEach(vm.list) { event in
+            ForEach(vm.clubEventList) { event in
                 ListItemView(event:event)
             }
+        }.onAppear {
+            vm.getClubEventList()
         }
     }
 }
