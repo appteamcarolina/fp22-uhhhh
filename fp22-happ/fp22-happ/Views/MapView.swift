@@ -13,6 +13,7 @@ struct MapView: View {
     @StateObject private var vm = MapViewModel()
     @ObservedObject private var fireManager = firestoreManager()
     @State private var showEventSheet: Bool = false
+    @State private var showingPopover: Bool = false
     
     @State var eventName: String = ""
     @State var eventAddress: String = ""
@@ -48,7 +49,7 @@ struct MapView: View {
                     
                     Circle()
                         .foregroundColor(.white)
-                        .frame(width: 50, height: 50, alignment: .bottomTrailing)
+                        .frame(width: 50, height: 50, alignment: .bottomTrailing).opacity(0.75)
                     
                     Image(systemName: "plus")
                         .font(.system(size: 30))
@@ -59,7 +60,7 @@ struct MapView: View {
             .sheet(isPresented: $showEventSheet, onDismiss: didDismiss) {
                 // Add code for sheet UI
                 NewEventSheetView(showEventSheet: $showEventSheet, vm: vm,fireManager: fireManager)
-            }
+            }.padding(.bottom, 10)
         }.ignoresSafeArea()
     }
     
