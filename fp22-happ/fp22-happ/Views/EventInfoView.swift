@@ -11,7 +11,10 @@ import MapKit
 struct EventInfoView: View {
     
     var event: Event
-    var eventTime: DateFormatter = DateFormatter()
+    var manager: firestoreManager
+    var eventTimeFormatter = DateFormatter()
+    @State var didRSVP = false
+    
     
     var body: some View {
         ScrollView(.vertical) {
@@ -26,6 +29,8 @@ struct EventInfoView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 5.0)
                     .foregroundColor(.gray)
+                
+                
                 
                 Text(event.eventTitle)
                     .font(.title)
@@ -55,12 +60,7 @@ struct EventInfoView: View {
                     .padding(.bottom, 5.0)
                     .foregroundColor(.gray)
                 
-                Text(
-    """
-    555 Paul Hardin Drive \
-    Chapel Hill, NC 27514
-    """
-                )
+                Text(event.eventAddress)
                     .font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
@@ -108,7 +108,7 @@ struct EventInfoView: View {
                     .padding(.bottom, 5.0)
                     .foregroundColor(.gray)
                 
-                Text(eventTime.string(from: event.startTime))
+                Text(event.startTime.formatted(.dateTime))
                     .font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
@@ -122,7 +122,7 @@ struct EventInfoView: View {
                     .padding(.bottom, 5.0)
                     .foregroundColor(.gray)
                 
-                Text(eventTime.string(from: event.endTime))
+                Text(event.endTime.formatted(.dateTime))
                     .font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
@@ -139,6 +139,6 @@ struct EventInfoView: View {
 struct EventInfoView_Previews: PreviewProvider {
     static var previews: some View {
         EventInfoView(event: Event(eventTitle: "Quad Chilling", eventDesc: "working on happ in the big tent at the quad with some nice weather", eventHost: "Turner", eventLocation: CLLocation(latitude: 39, longitude: -70), eventCategory: EventCategory.clubEvent, numAttending: 0, startTime: Date(), endTime: Date(),
-                      eventAddress: ""))
+                                   eventAddress: "Bruh"),manager: firestoreManager())
     }
 }

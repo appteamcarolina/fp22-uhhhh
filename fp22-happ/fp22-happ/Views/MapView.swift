@@ -31,7 +31,7 @@ struct MapView: View {
                 
                 MapAnnotation(coordinate: event.eventLocation.coordinate) {
                     NavigationLink {
-                        EventInfoView(event: event)
+                        EventInfoView(event: event,manager: fireManager)
                     } label: {
                         Image(systemName: "mappin.circle.fill")
                     }
