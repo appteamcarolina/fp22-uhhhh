@@ -11,16 +11,11 @@ import MapKit
 struct EventInfoView: View {
     
     var event: Event
+    var eventTime: DateFormatter = DateFormatter()
     
     var body: some View {
         ScrollView(.vertical) {
             VStack {
-                
-                Text("Event Information")
-                    .font(.title)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
                 
                 Divider()
                 
@@ -102,8 +97,40 @@ struct EventInfoView: View {
                     .padding(.bottom)
                     .padding(.horizontal)
             }
+            
+            VStack {
+                
+                Text("Start Time")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .padding(.bottom, 5.0)
+                    .foregroundColor(.gray)
+                
+                Text(eventTime.string(from: event.startTime))
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                    .padding(.horizontal)
+                
+                Text("End Time")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.horizontal)
+                    .padding(.bottom, 5.0)
+                    .foregroundColor(.gray)
+                
+                Text(eventTime.string(from: event.endTime))
+                    .font(.title)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                    .padding(.horizontal)
+                
+            }
         }
-        
+        .navigationTitle("Event Information")
         
         Spacer()
     }
