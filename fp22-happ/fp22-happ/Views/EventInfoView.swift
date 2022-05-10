@@ -20,117 +20,95 @@ struct EventInfoView: View {
         ScrollView(.vertical) {
             VStack {
                 
-                Divider()
+                HStack {
+                    
+                    Image(systemName: "person.2")
+                        .font(.title3)
+                    
+                    Text(String(event.numAttending))
+                        .font(.title3)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+//                .padding()
                 
-                Text("Event Name")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5.0)
-                    .foregroundColor(.gray)
+                HStack {
+                    
+                    Image(systemName: "person")
+                    
+                    Text(event.eventHost)
+                        .font(.title3)
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
                 
+                HStack {
+                    
+                    Image(systemName: "pin")
+                    
+                    Text(event.eventAddress)
+                        .font(.title3)
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
                 
-                
-                Text(event.eventTitle)
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
-                    .padding(.horizontal)
-                
-                Text("Event Host")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5.0)
-                    .foregroundColor(.gray)
-                
-                Text(event.eventHost)
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
-                    .padding(.horizontal)
-                
-                Text("Event Address")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5.0)
-                    .foregroundColor(.gray)
-                
-                Text(event.eventAddress)
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
-                    .padding(.horizontal)
-                
-                Text("Event Description")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5.0)
-                    .foregroundColor(.gray)
-                
-                Text(event.eventDesc)
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
-                    .padding(.horizontal)
-                
-            }
+                }
             
             VStack {
-                Text("Number Attending")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5.0)
-                    .foregroundColor(.gray)
-                
-                Text(String(event.numAttending))
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
-                    .padding(.horizontal)
-            }
+
+                HStack {
+                    Image(systemName: "clock")
+                    
+                    Text(event.startTime.formatted(.dateTime))
+                        .font(.title3)
             
-            VStack {
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
                 
-                Text("Start Time")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5.0)
-                    .foregroundColor(.gray)
+                HStack {
+                    
+                    Image(systemName: "text.bubble")
+                    
+                    Text(event.eventDesc)
+                        .font(.title3)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
                 
-                Text(event.startTime.formatted(.dateTime))
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
-                    .padding(.horizontal)
+                Button {
+                    //
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 200)
+                            .foregroundColor(.blue)
+                        
+                        Text("I'll Be There")
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding(.vertical, 6)
+                            .padding(.horizontal, 12)
+                            .cornerRadius(8)
+    
+                    }
+                    .padding()
+                }
                 
-                Text("End Time")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5.0)
-                    .foregroundColor(.gray)
-                
-                Text(event.endTime.formatted(.dateTime))
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
-                    .padding(.horizontal)
-                
+                Button {
+                    //
+                } label: {
+                    Text("Take Me Off The List")
+                        .foregroundColor(.red)
+                }
+
+
             }
         }
-        .navigationTitle("Event Information")
+        .navigationBarTitle(
+            Text(event.eventTitle)
+            )
         
         Spacer()
     }
