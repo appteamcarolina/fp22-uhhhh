@@ -8,8 +8,8 @@
 import Foundation
 
 final class AccountViewModel: ObservableObject {
-    @Published private(set) var name: String = ""
-    @Published private(set) var instaHandle: String = ""
+    @Published var name: String = ""
+    @Published var instaHandle: String = ""
     
     init() {
         name = ProfileDataStore.fetchName()
@@ -22,5 +22,9 @@ final class AccountViewModel: ObservableObject {
     
     func changeInsta(newInsta: String) {
         ProfileDataStore.saveInsta(string: newInsta)
+    }
+    func ref() {
+        self.name = ProfileDataStore.fetchName()
+        self.instaHandle = ProfileDataStore.fetchInsta()
     }
 }

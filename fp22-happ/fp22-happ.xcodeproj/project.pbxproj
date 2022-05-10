@@ -30,7 +30,6 @@
 		F671FE48280B80A100F0A91B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE47280B80A100F0A91B /* Profile.swift */; };
 		F671FE4A280B80B800F0A91B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE49280B80B800F0A91B /* Event.swift */; };
 		F671FE4C280B80EA00F0A91B /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4B280B80EA00F0A91B /* FirebaseService.swift */; };
-		F671FE4E280B811200F0A91B /* EventListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671FE4D280B811200F0A91B /* EventListModel.swift */; };
 		F671FE50280C5BF800F0A91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F671FE4F280C5BF800F0A91B /* GoogleService-Info.plist */; };
 		F67DB82A2814750D00B4297A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB8292814750D00B4297A /* SearchViewModel.swift */; };
 		F67DB82D281477A500B4297A /* ConcertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DB82C281477A500B4297A /* ConcertListView.swift */; };
@@ -74,7 +73,6 @@
 		F671FE47280B80A100F0A91B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F671FE49280B80B800F0A91B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F671FE4B280B80EA00F0A91B /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		F671FE4D280B811200F0A91B /* EventListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListModel.swift; sourceTree = "<group>"; };
 		F671FE4F280C5BF800F0A91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F67DB8292814750D00B4297A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		F67DB82C281477A500B4297A /* ConcertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertListView.swift; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 				F671FE47280B80A100F0A91B /* Profile.swift */,
 				F671FE49280B80B800F0A91B /* Event.swift */,
 				F671FE4B280B80EA00F0A91B /* FirebaseService.swift */,
-				F671FE4D280B811200F0A91B /* EventListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 				62681D1C2804B9D0001129B1 /* SignUpView.swift in Sources */,
 				F67DB839281477FB00B4297A /* SportListView.swift in Sources */,
 				F67DB82A2814750D00B4297A /* SearchViewModel.swift in Sources */,
-				F671FE4E280B811200F0A91B /* EventListModel.swift in Sources */,
 				F671FE46280B807F00F0A91B /* MapViewModel.swift in Sources */,
 				62926CC52804B4A40071525A /* ContentView.swift in Sources */,
 				F67DB82D281477A500B4297A /* ConcertListView.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccountView: View {
     var vm: AuthViewModel
-    var avm = AccountViewModel()
+    @StateObject var avm = AccountViewModel()
     var body: some View {
         VStack(alignment: .center) {
             Image("alecbby")
@@ -29,7 +29,7 @@ struct AccountView: View {
             
                 
             NavigationLink {
-                ProfileEditView()
+                ProfileEditView(avm: avm)
             } label: {
                 Text("Edit Profile")
                     .foregroundColor(.blue)
@@ -60,6 +60,8 @@ struct AccountView: View {
                     .cornerRadius(8)
                     .foregroundColor(.red)
             }
+        }.onAppear {
+            avm.ref()
         }
     }
 }

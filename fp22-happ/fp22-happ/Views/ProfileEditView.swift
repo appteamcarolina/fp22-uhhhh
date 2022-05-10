@@ -11,10 +11,11 @@ struct ProfileEditView: View {
     
     @State var name: String = ""
     @State var instagram: String = ""
+    var avm: AccountViewModel
     
     var body: some View {
         VStack {
-            Text("Edit your name:")
+            Text("Enter your name:")
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top)
@@ -42,6 +43,12 @@ struct ProfileEditView: View {
                 .disableAutocorrection(true)
                 .autocapitalization(.none)
             
+            Button {
+                avm.changeName(newName: name)
+                avm.changeInsta(newInsta: instagram)
+            } label: {
+                Text("Save Changes")
+            }
             Spacer()
         }
         .navigationTitle("Edit Profile")
@@ -50,6 +57,6 @@ struct ProfileEditView: View {
 
 struct ProfileEditView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileEditView()
+        ProfileEditView(avm: AccountViewModel())
     }
 }
