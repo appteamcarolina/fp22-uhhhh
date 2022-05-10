@@ -20,13 +20,18 @@ struct EventInfoView: View {
         ScrollView(.vertical) {
             VStack {
                 
+                
+                
                 HStack {
-                    
-                    Image(systemName: "person.2")
-                        .font(.title3)
-                    
-                    Text(String(event.numAttending))
-                        .font(.title3)
+                    Text(event.eventTitle)
+                        .font(.title)
+                    HStack {
+                        Image(systemName: "person.2")
+                            .font(.title3)
+                        
+                        Text(String(event.numAttending))
+                            .font(.title3)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
 //                .padding()
@@ -106,9 +111,7 @@ struct EventInfoView: View {
 
             }
         }
-        .navigationBarTitle(
-            Text(event.eventTitle)
-            )
+        .navigationBarTitle("")
         
         Spacer()
     }

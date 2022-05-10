@@ -29,20 +29,27 @@ struct NewEventSheetView: View {
                 Group {
                     Text("Create Event")
                         .font(.title)
-                        .bold()
                         .padding()
                     
-                    Text("Event Info")
-                        .font(.headline)
-                        .bold()
+                    Text("Title")
+                        .font(.body)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(.gray)
                         .padding()
                     
                     TextField("Enter a title for your event", text: $eventTitle)
                         .textFieldStyle(.roundedBorder)
                         .padding([.horizontal, .bottom])
+                    
+                    Text("Describe What's Happening")
+                        .font(.body)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(.gray)
+                        .padding()
+                    
                     TextField("Enter a description for your event", text: $eventDesc).textFieldStyle(.roundedBorder).padding([.horizontal,.bottom])
                     
-                    HStack {
+                    VStack {
                         Text("Select a category for your event").foregroundColor(.secondary)
                         
                         Picker(selection: $eventCategory,label: Text("Select a category for your event")) {
@@ -55,8 +62,9 @@ struct NewEventSheetView: View {
                 
                 Group {
                     Text("Time Info")
-                        .font(.headline)
-                        .bold()
+                        .font(.body)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(.gray)
                         .padding()
                     
                     
@@ -67,8 +75,9 @@ struct NewEventSheetView: View {
                         .padding()
                 }
                 Text("Location")
-                    .font(.headline)
-                    .bold()
+                    .font(.body)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(.gray)
                     .padding()
                 
                 TextField("Enter Event Address", text: $eventAddress)
@@ -104,7 +113,24 @@ struct NewEventSheetView: View {
                         fireManager.addEvent(event: event)
                         showEventSheet.toggle()
                     })
-                } label: {Text("Create Event")}
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .frame(width: 200)
+                            .foregroundColor(.blue)
+                        
+                        Text("Add to Map")
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding(.vertical, 6)
+                            .padding(.horizontal, 12)
+                            .cornerRadius(8)
+    
+                    }
+                    .padding()
+                    
+                    
+                }
             }
             
         }
