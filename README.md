@@ -1,4 +1,4 @@
-# fp22-happ
+# Happ
 Apprenticeship Spring 2022 - Final Project Repository
 
 # About
